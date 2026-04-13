@@ -75,7 +75,7 @@ export default function GreetingPage() {
               {/* 핵심 슬로건을 h3로 지정하여 정보 위계 확립 */}
               <h3 className="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-12">
                 {t(
-                  '"어게인 필승 코리아!! 5천만 국민 여러분!! 새로운 미래를 개척하기 위한 준비운동을 마쳤습니다."',
+                  '"어게인 필2322승 코리아!! 5천만 국민 여러분!! 새로운 미래를 개척하기 위한 준비운동을 마쳤습니다."',
                   '"Again Victory Korea!! To 50 million citizens!! We have finished our warm-up to pioneer a new future."',
                 )}
               </h3>
