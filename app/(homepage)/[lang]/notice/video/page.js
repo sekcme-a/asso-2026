@@ -19,7 +19,7 @@ export default async function Photo({ params, searchParams }) {
           t("알림마당", "News & Media"),
           t("동영상갤러리", "Video Gallery"),
         ]}
-        title={t("동영상갤러리", "Vide1o Gallery")}
+        title={t("동영상갤러리", "Video Gallery")}
         subTitle={
           <>
             {t(
