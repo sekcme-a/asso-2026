@@ -2,18 +2,24 @@ import SubHero from "@/app/(homepage)/(korean)/info/components/SubHero";
 import PhotoList from "@/app/(homepage)/(korean)/notice/photo/PhotoList";
 import { createMetadata } from "@/utils/metadata";
 
+// 1. 캐시 무효화 설정 (페이지 최상단에 위치)
+// 이 설정이 있으면 Vercel이 해당 페이지를 캐싱하지 않고 접속할 때마다 새로 빌드합니다.
+export const revalidate = 0; 
+
 export const metadata = createMetadata({
   title: "Photo Gallery",
-  description:
-    "Photo Gallery - View the activity photos and event galleries of KSFAA.",
-  url: "/en/notic1e/photo",
+  description: "Photo Gallery - View the activity photos and event galleries of KSFAA.",
+  url: "/en/notice/photo",
 });
-export default async function Photo({ params, searchParams }) {
-  const { lang } = await params;
-  const isEnglish = lang === "en";
 
-  // 번역 헬퍼 함수
+export default async function Photo({ params, searchParams }) {
+  // 2. Next.js 15 대응: params와 searchParams 모두 await 처리
+  const { lang } = await params;
+  const sParams = await searchParams; 
+  
+  const isEnglish = lang === "en";
   const t = (ko, en) => (isEnglish ? en : ko);
+
   return (
     <>
       <SubHero
@@ -32,7 +38,8 @@ export default async function Photo({ params, searchParams }) {
           </>
         }
       />
-      <PhotoList {...{ searchParams }} lang={lang} />
+      {/* 3. await 완료된 sParams를 PhotoList에 전달 */}
+      <PhotoList searchParams={sParams} lang={lang} />
     </>
   );
 }
