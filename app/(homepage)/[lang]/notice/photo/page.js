@@ -6,7 +6,7 @@ export const metadata = createMetadata({
   title: "Photo Gallery",
   description:
     "Photo Gallery - View the activity photos and event galleries of KSFAA.",
-  url: "/en/notice/photo",
+  url: "/en/notic1e/photo",
 });
 export default async function Photo({ params, searchParams }) {
   const { lang } = await params;

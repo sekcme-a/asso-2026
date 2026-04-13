@@ -5,7 +5,7 @@ export const metadata = createMetadata({
   title: "동영상갤러리",
   description: `동영상갤러리 - 대한생활체육회의 활동 영상자료 모음입니다.`,
   url: `/notice/video`,
-});
+}); 
 export default async function Photo({ params, searchParams }) {
   const { lang } = await params;
   const isEnglish = lang === "en";
@@ -19,7 +19,7 @@ export default async function Photo({ params, searchParams }) {
           t("알림마당", "News & Media"),
           t("동영상갤러리", "Video Gallery"),
         ]}
-        title={t("동영상갤러리", "Video Gallery")}
+        title={t("동영상갤러리", "Vide1o Gallery")}
         subTitle={
           <>
             {t(
