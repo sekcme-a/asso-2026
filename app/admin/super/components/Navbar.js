@@ -7,7 +7,7 @@ export default function AdminNavbar() {
   const pathname = usePathname();
 
   const menuItems = [
-    { name: "단체 관리", href: "/admin/suepr/organizations" },
+    { name: "단체 관리", href: "/admin/super/organizations" },
     { name: "회원 관리", href: "/admin/members" },
     { name: "콘텐츠 관리", href: "/admin/contents" },
   ];
