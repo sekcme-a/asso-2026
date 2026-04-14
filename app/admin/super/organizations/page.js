@@ -274,7 +274,7 @@ export default function AdminOrgPage() {
                     Location
                   </label>
                   <input
-                    require
+                    required
                     value={formData.location}
                     onChange={(e) =>
                       setFormData({ ...formData, location: e.target.value })
