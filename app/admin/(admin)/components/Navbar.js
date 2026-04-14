@@ -8,7 +8,7 @@ export default function AdminNavbar() {
   const { orgId } = useParams();
 
   const menuItems = [
-    { name: "단체소개 관리", href: `/admin/organizations/${orgId}` },
+    { name: "단체소개 관리", href: `/admin/super/organizations/${orgId}` },
     { name: "회원 관리", href: `/admin/organizations/${orgId}/members` },
     {
       name: "공지사항 관리",
